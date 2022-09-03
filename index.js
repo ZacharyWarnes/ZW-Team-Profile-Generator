@@ -28,7 +28,7 @@
             //What is your intern's school?
         //THEN Build an intern object
 
-//What type of team member would you like to add?
-        //Manager
+//What type of team member would you like to add or are they done?
         //Engineer
         //Intern
+        //I don't want to add more team members
