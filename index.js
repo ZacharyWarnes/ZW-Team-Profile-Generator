@@ -209,7 +209,7 @@ function createEngineerProfile(name, id, email, github, role) {
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">Email: ${email}</li>
-                <li class="list-group-item">GitHub: <a href= "https://github.com/${github}"</li>
+                <li class="list-group-item">GitHub: <a href= "https://github.com/${github}"></li>
             </ul>
         </div>
     </div>
