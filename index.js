@@ -1,9 +1,7 @@
 // Required program files
 const fs = require('fs');
-const { default: inquirer } = require('inquirer');
 const inquier = require('inquirer');
-const { default: Choice } = require('inquirer/lib/objects/choice');
-const { default: Choices } = require('inquirer/lib/objects/choices');
+
 
 
 
@@ -123,9 +121,6 @@ function nextTeamMember(){
             }
         ])
 }
-        //inquier.prompt()
-            //Engineer
-            //Intern
-            //I don't want to add more team members
+        
 
 //Generate the html and write the file 
