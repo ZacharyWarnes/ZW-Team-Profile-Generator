@@ -13,6 +13,13 @@ const Employee= require('./lib/Employee');
 var manager;
 var engineerArray = [];
 var internArray = [];
+var engineerProfile;
+var internProfile;
+var managerProfile= "";
+var engineerProfiles="";
+var internProfiles="";
+
+
 
 
 
@@ -154,8 +161,7 @@ function nextTeamMember(){
                     generateIntern();
                     break;
                 case "I don't want to add more team members":
-                    //This function will create the new page
-                    // generatePage();
+                    generatePage();
                     console.log("Hello is this working?")
                     break;
             }
@@ -164,7 +170,7 @@ function nextTeamMember(){
 
 
 //This function generates the Manager Profile Card to be appended to HTML
-function createManagerProfile() {
+function generateManagerProfile() {
     const name= manager.getName();
     const id= manager.getId();
     const email= manager.getEmail();
@@ -206,6 +212,7 @@ function createEngineerProfile(name, id, email, github, role) {
         </div>
     </div>
     `
+    return engineerProfile;
 }
 
 //This function defines the dynamic variables in the createEngineerProfile function and iterates through the user's entries
@@ -239,6 +246,7 @@ function createInternProfile(name, id, email, school, role) {
         </div>
     </div>
     `
+    return internProfile;
 }
 
 //This function defines the dynamic variable in the createInternProfile function and iterages through the user's entries
@@ -255,5 +263,15 @@ function generateInternProfile() {
     return internProfiles;
 }
 
+//This function will create the html page showing the different employee profiles
+function generatePage() {
+    generateManagerProfile();
+    generateEngineerProfile();
+    generateInternProfile();
+//Will put function to generate HTML here
+}
+
 //Generate the html and write the file 
 generateManager();
+
+//Check global variables if profile cards aren't passing data through correctly********
