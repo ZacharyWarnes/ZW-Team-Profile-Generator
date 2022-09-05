@@ -1,6 +1,10 @@
 // Required program files
 const fs = require('fs');
 const inquier = require('inquirer');
+const Manager= require('./lib/Manager');
+const Engineer= require('./lib/Engineer');
+const Intern= require('./lib/Intern');
+const Employee= require('./lib/Employee');
 
 
 
@@ -109,7 +113,7 @@ function generateIntern() {
       
         //THEN Build an intern object
 
-//What type of team member would you like to add or are they done?
+//This function runs after the Manager function and allows the user to choose to add a new Team Member and to choose which type
 function nextTeamMember(){
     inquirer
         .prompt([
@@ -117,11 +121,27 @@ function nextTeamMember(){
                 type: "list",
                 message: "Which type of team member would you like to add?",
                 choices: ["Engineer", "Intern", "I don't want to add more team members"],
-                name: "addTeam",
+                name: "addNew",
                 default: "No new team members to add"
                 
             }
         ])
+//Takes the user choice and calls the cooresponding funtions above to run inquirer again
+        .then((response) => {
+            const addedEmployee = response.addNew;
+            switch(addedEmployee) {
+                case "Engineer":
+                    generateEngineer();
+                    break;
+                case "Intern":
+                    generateIntern();
+                    break;
+                case "I don't want to add more team members":
+                    //This function will create the new page
+                    // generatePage();
+                    break;
+            }
+        })
 }
         
 
