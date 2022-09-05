@@ -48,6 +48,11 @@ function generateManager() {
                 name: "managerOffice"
             }
         ])
+        .then((response)=> {
+            var {managerName, managerId, managerEmail, managerOffice} = response;
+            manager = new Manager(managerName, managerId, managerEmail, managerOffice);
+            nextTeamMember();
+        })
 }
         
         //THEN Build a manager object
@@ -79,6 +84,11 @@ function generateEngineer() {
 
             }
         ])
+        .then((response) => {
+            var {engineerName, engineerId, engineerEmail, engineerGitHub} = response;
+            var engineer = new Engineer(engineerName, engineerId, engineerEmail, engineerGitHub);
+            nextTeamMember();
+        })
 }
         
         //THEN build an engineer object 
@@ -109,6 +119,11 @@ function generateIntern() {
                 name: "internSchool"
             }
         ])
+        .then((response)=> {
+            var {interName, internId, internEmail, internSchool}=response;
+            var intern= new Intern(internName, internId, internSchool);
+            nextTeamMember();
+        })
 }
       
         //THEN Build an intern object
