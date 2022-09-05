@@ -1,6 +1,6 @@
 // Required program files
 const fs = require('fs');
-const inquier = require('inquirer');
+const inquirer = require('inquirer');
 const Manager= require('./lib/Manager');
 const Engineer= require('./lib/Engineer');
 const Intern= require('./lib/Intern');
@@ -87,6 +87,7 @@ function generateEngineer() {
         .then((response) => {
             var {engineerName, engineerId, engineerEmail, engineerGitHub} = response;
             var engineer = new Engineer(engineerName, engineerId, engineerEmail, engineerGitHub);
+            engineerArray.push(engineer);
             nextTeamMember();
         })
 }
@@ -120,8 +121,9 @@ function generateIntern() {
             }
         ])
         .then((response)=> {
-            var {interName, internId, internEmail, internSchool}=response;
-            var intern= new Intern(internName, internId, internSchool);
+            var {internName, internId, internEmail, internSchool}=response;
+            var intern= new Intern(internName, internId, internEmail, internSchool);
+            internArray.push(intern);
             nextTeamMember();
         })
 }
@@ -162,3 +164,4 @@ function nextTeamMember(){
         
 
 //Generate the html and write the file 
+generateManager();
