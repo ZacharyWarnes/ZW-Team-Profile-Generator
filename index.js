@@ -16,7 +16,6 @@ var internArray = [];
 
 
 
-//Write functions that call each other instead of create For Loops
 
 //Function that garthers manager data 
 function generateManager() {
@@ -56,7 +55,7 @@ function generateManager() {
         })
 }
         
-        //THEN Build a manager object
+      
 
 
 // Gather engineer data
@@ -188,6 +187,72 @@ function createManagerProfile() {
     </div>
     `
     return managerProfile;
+}
+
+//This function creates the template literal for the Engineer Profile to be pushed to the HTML page
+function createEngineerProfile(name, id, email, github) {
+    engineerProfile= `
+    <div class="card>
+        <div class="card-header bg-primary">
+            <h4 class="card-title font-weight-bold text-white">${name}</h4>
+            <p class="card-text text-white">${role}</p>
+        </div>
+        <div class="card-body>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">ID: ${id}</li>
+                <li class="list-group-item">Email: ${email}</li>
+                <li class="list-group-item">GitHub: <a href= "https://github.com/${github}"</li>
+            </ul>
+        </div>
+    </div>
+    `
+}
+
+//This function defines the dynamic variables in the createEngineerProfile function and iterates through the user's entries
+function generateEngineerProfile() {
+    for (var i =0; i < engineerArray.length; i++) {
+        let engineers = engineerArray[i];
+        let name = engineerArray.getName();
+        let id = engineerArray.getId();
+        let email = engineerArray.getEmail();
+        let github = engineerArray.getGitHub();
+        let role = engineerArray.getRole();
+        engineerProfiles += createEngineerProfile(name, id, email, github, role);
+    }
+    return engineerProfiles;
+}
+
+//This function creates the template literal for the Intern Profile to be pushed up to the HTML page
+function createInternProfile(name, id, email, school, role) {
+    internProfile = `
+    <div class="card>
+        <div class="card-header bg-primary">
+            <h4 class="card-title font-weight-bold text-white">${name}</h4>
+            <p class="card-text text-white">${role}</p>
+        </div>
+        <div class="card-body>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">ID: ${id}</li>
+                <li class="list-group-item">Email: ${email}</li>
+                <li class="list-group-item">School: ${school} </li>
+            </ul>
+        </div>
+    </div>
+    `
+}
+
+//This function defines the dynamic variable in the createInternProfile function and iterages through the user's entries
+function generateInternProfile() {
+    for (var i =0; i < internArray.length; i++) {
+        let interns = internArray[i];
+        let name = internArray.getName();
+        let id = internArray.getId();
+        let email = internArray.getEmail();
+        let school = internArray.getSchool();
+        let role = internArray.getRole();
+        internProfiles += createInternProfile(name, id, email, school, role);
+    }
+    return internProfiles;
 }
 
 //Generate the html and write the file 
