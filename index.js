@@ -190,7 +190,7 @@ function createManagerProfile() {
 }
 
 //This function creates the template literal for the Engineer Profile to be pushed to the HTML page
-function createEngineerProfile(name, id, email, github) {
+function createEngineerProfile(name, id, email, github, role) {
     engineerProfile= `
     <div class="card>
         <div class="card-header bg-primary">
