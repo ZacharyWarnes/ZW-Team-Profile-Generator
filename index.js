@@ -5,6 +5,8 @@ const Manager= require('./lib/Manager');
 const Engineer= require('./lib/Engineer');
 const Intern= require('./lib/Intern');
 const Employee= require('./lib/Employee');
+const createHTML= require('./src/page-template')
+
 
 
 
@@ -268,7 +270,11 @@ function generatePage() {
     generateManagerProfile();
     generateEngineerProfile();
     generateInternProfile();
-//Will put function to generate HTML here
+    createHTML(managerProfile, engineerProfiles, internProfiles);
+    fs.writeFile('team.html', templateHTML, (err) =>
+         err ? console.error(err) : console.log("Page has been successfully created")
+    )
+
 }
 
 //Generate the html and write the file 
