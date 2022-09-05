@@ -4,7 +4,7 @@ const inquirer = require('inquirer');
 const Manager= require('./lib/Manager');
 const Engineer= require('./lib/Engineer');
 const Intern= require('./lib/Intern');
-const Employee= require('./lib/Employee');
+// const Employee= require('./lib/Employee');
 const createHTML= require('./src/page-template')
 
 
@@ -176,7 +176,7 @@ function generateManagerProfile() {
     const name= manager.getName();
     const id= manager.getId();
     const email= manager.getEmail();
-    const officeNumber= manager.getofficeNumber();
+    const officeNumber= manager.getOfficeNumber();
     const role= manager.getRole();
 
     managerProfile= `
@@ -221,11 +221,11 @@ function createEngineerProfile(name, id, email, github, role) {
 function generateEngineerProfile() {
     for (var i =0; i < engineerArray.length; i++) {
         let engineers = engineerArray[i];
-        let name = engineerArray.getName();
-        let id = engineerArray.getId();
-        let email = engineerArray.getEmail();
-        let github = engineerArray.getGitHub();
-        let role = engineerArray.getRole();
+        let name = engineers.getName();
+        let id = engineers.getId();
+        let email = engineers.getEmail();
+        let github = engineers.getGitHub();
+        let role = engineers.getRole();
         engineerProfiles += createEngineerProfile(name, id, email, github, role);
     }
     return engineerProfiles;
@@ -255,11 +255,11 @@ function createInternProfile(name, id, email, school, role) {
 function generateInternProfile() {
     for (var i =0; i < internArray.length; i++) {
         let interns = internArray[i];
-        let name = internArray.getName();
-        let id = internArray.getId();
-        let email = internArray.getEmail();
-        let school = internArray.getSchool();
-        let role = internArray.getRole();
+        let name = interns.getName();
+        let id = interns.getId();
+        let email = interns.getEmail();
+        let school = interns.getSchool();
+        let role = interns.getRole();
         internProfiles += createInternProfile(name, id, email, school, role);
     }
     return internProfiles;
