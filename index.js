@@ -154,6 +154,7 @@ function nextTeamMember(){
                 case "I don't want to add more team members":
                     //This function will create the new page
                     // generatePage();
+                    console.log("Hello is this working?")
                     break;
             }
         })
