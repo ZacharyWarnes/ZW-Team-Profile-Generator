@@ -19,5 +19,8 @@
   "homepage": "https://github.com/ZacharyWarnes/ZW-Team-Profile-Generator#readme",
   "dependencies": {
     "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
+    "jest": "^29.0.2"
   }
 }
