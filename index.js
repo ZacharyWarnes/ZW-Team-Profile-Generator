@@ -15,6 +15,7 @@ var engineerArray = [];
 var internArray = [];
 
 
+
 //Write functions that call each other instead of create For Loops
 
 //Function that garthers manager data 
@@ -161,7 +162,33 @@ function nextTeamMember(){
             }
         })
 }
-        
+
+
+//This function generates the Manager Profile Card to be appended to HTML
+function createManagerProfile() {
+    const name= manager.getName();
+    const id= manager.getId();
+    const email= manager.getEmail();
+    const officeNumber= manager.getofficeNumber();
+    const role= manager.getRole();
+
+    managerProfile= `
+    <div class="card>
+        <div class="card-header bg-primary">
+            <h4 class="card-title font-weight-bold text-white">${name}</h4>
+            <p class="card-text text-white">${role}</p>
+        </div>
+        <div class="card-body>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">ID: ${id}</li>
+                <li class="list-group-item">Email: ${email}</li>
+                <li class="list-group-item">Office number: ${officeNumber}</li>
+            </ul>
+        </div>
+    </div>
+    `
+    return managerProfile;
+}
 
 //Generate the html and write the file 
 generateManager();
