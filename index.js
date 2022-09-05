@@ -180,12 +180,12 @@ function generateManagerProfile() {
     const role= manager.getRole();
 
     managerProfile= `
-    <div class="card>
+    <div class="card">
         <div class="card-header bg-primary">
             <h4 class="card-title font-weight-bold text-white">${name}</h4>
             <p class="card-text text-white">${role}</p>
         </div>
-        <div class="card-body>
+        <div class="card-body">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">Email: ${email}</li>
@@ -200,12 +200,12 @@ function generateManagerProfile() {
 //This function creates the template literal for the Engineer Profile to be pushed to the HTML page
 function createEngineerProfile(name, id, email, github, role) {
     engineerProfile= `
-    <div class="card>
+    <div class="card">
         <div class="card-header bg-primary">
             <h4 class="card-title font-weight-bold text-white">${name}</h4>
             <p class="card-text text-white">${role}</p>
         </div>
-        <div class="card-body>
+        <div class="card-body">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">Email: ${email}</li>
@@ -234,12 +234,12 @@ function generateEngineerProfile() {
 //This function creates the template literal for the Intern Profile to be pushed up to the HTML page
 function createInternProfile(name, id, email, school, role) {
     internProfile = `
-    <div class="card>
+    <div class="card">
         <div class="card-header bg-primary">
             <h4 class="card-title font-weight-bold text-white">${name}</h4>
             <p class="card-text text-white">${role}</p>
         </div>
-        <div class="card-body>
+        <div class="card-body">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">Email: ${email}</li>
