@@ -271,7 +271,7 @@ function generatePage() {
     generateEngineerProfile();
     generateInternProfile();
     createHTML(managerProfile, engineerProfiles, internProfiles);
-    fs.writeFile('team.html', templateHTML, (err) =>
+    fs.writeFile('dist/team.html', templateHTML, (err) =>
          err ? console.error(err) : console.log("Page has been successfully created")
     )
 
