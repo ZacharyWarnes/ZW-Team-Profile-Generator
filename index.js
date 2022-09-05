@@ -114,10 +114,12 @@ function nextTeamMember(){
     inquirer
         .prompt([
             {
-                type: "input",
+                type: "list",
                 message: "Which type of team member would you like to add?",
                 choices: ["Engineer", "Intern", "I don't want to add more team members"],
-                name: "addTeam" 
+                name: "addTeam",
+                default: "No new team members to add"
+                
             }
         ])
 }
