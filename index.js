@@ -89,7 +89,7 @@ function generateEngineer() {
             {
                 type: "input",
                 message: "What is your Engineer's GitHub username?",
-                name: "engineerGithub" 
+                name: "engineerGitHub" 
 
             }
         ])
@@ -152,7 +152,7 @@ function nextTeamMember(){
                 
             }
         ])
-//Takes the user choice and calls the cooresponding funtions above to run inquirer again
+//Takes the user choice and calls the corresponding functions above to run inquirer again
         .then((response) => {
             const addedEmployee = response.addNew;
             switch(addedEmployee) {
@@ -198,7 +198,7 @@ function generateManagerProfile() {
 }
 
 //This function creates the template literal for the Engineer Profile to be pushed to the HTML page
-function createEngineerProfile(name, id, email, github, role) {
+function createEngineerProfile(name, id, email, gitHub, role) {
     engineerProfile= `
     <div class="card">
         <div class="card-header bg-primary">
@@ -209,7 +209,7 @@ function createEngineerProfile(name, id, email, github, role) {
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">Email: <a href="mailto:${email}" target="_blank">${email}</a></li>
-                <li class="list-group-item">GitHub: <a href="https://github.com/${github}" target="_blank">${github}</a></li>
+                <li class="list-group-item">GitHub: <a href="https://github.com/${gitHub}" target="_blank">${gitHub}</a></li>
             </ul>
         </div>
     </div>
@@ -224,9 +224,9 @@ function generateEngineerProfile() {
         let name = engineers.getName();
         let id = engineers.getId();
         let email = engineers.getEmail();
-        let github = engineers.getGitHub();
+        let gitHub = engineers.getGitHub();
         let role = engineers.getRole();
-        engineerProfiles += createEngineerProfile(name, id, email, github, role);
+        engineerProfiles += createEngineerProfile(name, id, email, gitHub, role);
     }
     return engineerProfiles;
 }
