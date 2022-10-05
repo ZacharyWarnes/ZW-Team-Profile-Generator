@@ -22,6 +22,8 @@ To install this application, clone this repository to your machine and open it i
 
 ## **Usage Instructions**
 
+
+
 ## **Technologies**
 
 * [JavaScript](https://www.javascript.com/) 
