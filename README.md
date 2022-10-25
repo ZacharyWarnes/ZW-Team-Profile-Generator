@@ -20,6 +20,8 @@ This Team Profile Generator takes user input and creates a team roster including
 
 To install this application, clone this repository to your machine and open it in your preferred code editor. Open the file in your terminal to get started. Make sure to install npm inquirer on your machine by typing the following code in your terminal: npm install inquirer@8.2.4
 
+Additionally, to run your own unit tests or to check the ones provided by the developer, npm jest must be installed. This can be done by entering "npm install jest" into your terminal.
+
 ## **Usage Instructions**
 
 * To use this program, open the Team Profile Generator in your code editor, open your terminal on index.js and type "node index.js"
@@ -34,6 +36,10 @@ To install this application, clone this repository to your machine and open it i
 
 * The video below walks you through the process.
 
+
+* This program has passed all unit tests
+
+[Screenshot of passed Unit Tests](./assets/ZW-Team-Profile-Generator%20Unit%20Tests.jpg)
 
 ## **Technologies**
 
