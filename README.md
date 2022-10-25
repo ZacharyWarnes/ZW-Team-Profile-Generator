@@ -36,10 +36,16 @@ Additionally, to run your own unit tests or to check the ones provided by the de
 
 * The video below walks you through the process.
 
+![Video instructions of how to use this program](./assets/Program_Function.webm)
+
+* The video below shows the web function 
+
+![Video of the Team Profile Generated to HTML](./assets/Web_function.webm)
+
 
 * This program has passed all unit tests
 
-[Screenshot of passed Unit Tests](./assets/ZW-Team-Profile-Generator%20Unit%20Tests.jpg)
+![Screenshot of passed Unit Tests](./assets/ZW-Team-Profile-Generator%20Unit%20Tests.jpg)
 
 ## **Technologies**
 
