@@ -22,6 +22,17 @@ To install this application, clone this repository to your machine and open it i
 
 ## **Usage Instructions**
 
+* To use this program, open the Team Profile Generator in your code editor, open your terminal on index.js and type "node index.js"
+
+* In your console, you will see a prompt to begin. Hit enter to start and answer the prompts.
+
+* You will be prompted to enter three catagories of team members: Manager, Engineer, and Intern. Follow the prompts and enter your information carefully. If you make a mistake, you will need to start again.
+
+* When you are finished select "I don't want to add more team members" and the program will end and push your entered data to the dist folder
+
+* Open the team.html file in the dist folder in a live or local server to see the webpage containing your team data
+
+* The video below walks you through the process.
 
 
 ## **Technologies**

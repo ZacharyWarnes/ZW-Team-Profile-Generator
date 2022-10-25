@@ -164,7 +164,7 @@ function nextTeamMember(){
                     break;
                 case "I don't want to add more team members":
                     generatePage();
-                    console.log("Hello is this working?")
+                    console.log("Finishing up!")
                     break;
             }
         })
