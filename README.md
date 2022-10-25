@@ -36,11 +36,11 @@ Additionally, to run your own unit tests or to check the ones provided by the de
 
 * The video below walks you through the process.
 
-![Video instructions of how to use this program](./assets/Program-Functionality-HW10.mp4)
+[Video instructions of how to use this program](https://youtu.be/851K_FjdPxk)
 
 * The video below shows the web function 
 
-![Video of the Team Profile Generated to HTML](./assets/Web-Functionality-HW10.mp4)
+[Video of the Team Profile Generated to HTML](https://youtu.be/rcJ3n3jMPak)
 
 
 * This program has passed all unit tests
